@@ -7,6 +7,8 @@ namespace ErickGranda_Taller.Models
     {
         [Key]
         public int ID { get; set; }
+        [Required]
+        [MaxLength(30)]
         public string Nombre { get; set; }
         public string Posición { get; set; }
         public string Edad { get; set; }

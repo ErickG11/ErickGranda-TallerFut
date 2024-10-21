@@ -8,7 +8,8 @@ namespace ErickGranda_Taller.Models
         [Key]
         [Required]
         public int ID { get; set; }
-        [MaxLength(50)]
+        [MaxLength(30)]
+        [Required]
         public string Nombre { get; set; }
         public string Ciudad { get; set; }
         public int Titulos { get; set; }
