@@ -13,9 +13,10 @@ namespace ErickGranda_Taller.Models
         public string Ciudad { get; set; }
         public int Titulos { get; set; }
         public bool AceptaExtranjeros { get; set; }
+        public Estadio? Estadio { get; set; }
 
         [ForeignKey("Estadio")]
         public int IDEstadio { get; set; }
-        public Estadio? Estadio { get; set; }
+        
     }
 }

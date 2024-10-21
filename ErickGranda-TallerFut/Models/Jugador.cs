@@ -10,9 +10,10 @@ namespace ErickGranda_Taller.Models
         public string Nombre { get; set; }
         public string Posición { get; set; }
         public string Edad { get; set; }
+        public Equipo? Equipo { get; set; }
 
         [ForeignKey("Equipo")]
         public int IDEquipo { get; set; }
-        public Equipo? Equipo { get; set; }
+        
     }
 }
