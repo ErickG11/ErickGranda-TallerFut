@@ -19,10 +19,22 @@ namespace ErickGranda_TallerFut.Controllers
         }
 
         // GET: Jugadors
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int IDEquipo)
         {
-            var tallerFutContext = _context.Jugador.Include(j => j.Equipo);
-            return View(await tallerFutContext.ToListAsync());
+            List<Jugador> tallerFutContext;
+            if (IDEquipo != 0)
+            {
+                tallerFutContext = await _context.Jugador
+                    .Where(j => j.IDEquipo == IDEquipo)
+                    .Include(j => j.Equipo).ToListAsync();
+            }
+            else
+            {
+                tallerFutContext = await _context.Jugador.Include(j => j.Equipo).ToListAsync();
+            }
+            ViewData["IDEquipo"] = new SelectList(_context.Equipo, "ID", "Nombre");
+
+            return View(tallerFutContext);
         }
 
         // GET: Jugadors/Details/5

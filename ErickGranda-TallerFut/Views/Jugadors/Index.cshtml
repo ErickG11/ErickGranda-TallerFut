@@ -9,6 +9,14 @@
 <p>
     <a class="btn btn-primary" asp-action="Create">Crear nuevo jugador</a>
 </p>
+<div class="mt-2 col-md-4">
+    <form asp-action="Index" method="get">
+        <select class="form-control" mt-3 name="IDEquipo" asp-items="ViewBag.IDEquipo">
+            <option value="0">Selecciona el Equipo...</option>
+        </select>
+        <input class="btn-primary col-12 mt-2" type="submit" value="Filtrar Equipos" />
+    </form>
+</div>
 <table class="table">
     <thead>
         <tr>

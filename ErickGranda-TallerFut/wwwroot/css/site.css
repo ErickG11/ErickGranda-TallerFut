@@ -29,15 +29,15 @@ h1 {
 .content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espacio entre el texto y la imagen */
-    margin: 20px 0; /* Margen alrededor del contenedor */
+    justify-content: space-between; 
+    margin: 20px 0;
 }
 
 .text {
-    margin-right: 90px; /* Espacio entre el texto y la imagen */
+    margin-right: 90px; 
 }
 
 .image {
-    max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
-    height: auto; /* Mantiene la relación de aspecto */
+    max-width: 100px; 
+    height: auto; 
 }
